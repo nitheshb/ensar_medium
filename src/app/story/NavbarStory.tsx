@@ -85,9 +85,12 @@ const SaveStoryPopUp = ({storyId,PublishStory,setShowPopUp,CurrentUserFirstName,
         {value:'Artificial Intelligence', label:"Artificial Intelligence"},
         {value:'Python', label:"Python"},
         {value:'Programming', label:"Programming"},
-        {value:'Fashion', label:"Fashion"},
-        {value:'World', label:"World"},
-        {value:'Politics', label:"Politics"},
+        {value:'Javascript', label:"Javascript"},
+        {value:'.net', label:".Net"},
+        {value:'Java', label:"Java"},
+        {value:'Database', label:"Database"},
+        {value:'sql', label:"sql"},
+        {value:'no-sql', label:"no-sql"},
     ]
 
     if(!Story) return null
