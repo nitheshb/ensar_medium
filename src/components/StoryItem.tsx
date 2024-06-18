@@ -59,7 +59,7 @@ const StoryItem = ({key,story}: Props) => {
         return htmlString.replace(/<[^>]*>/g, '');
       };
       const match = story.content?.match(/<img[^>]*src=["']([^"']*)["'][^>]*>/);
-      const imgSrc = match ? match[1] : '';
+      const imgSrc = match ? match[1] : 'https://miro.medium.com/v2/resize:fit:720/format:webp/1*BwEkWO_pkDg7WjkfJSnwJQ.png';
       const h1match = story.content?.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
     
       const h1Element = h1match ? h1match[1] : '';
@@ -90,7 +90,8 @@ const StoryItem = ({key,story}: Props) => {
             <SaveComponent storyId={story.id} SavedStatus={SavedStatus} />
             </div>
             </div>
-            <Image width={200} height={200} src={imgSrc ? imgSrc :"/no-image.jpg"} alt='Story Image'/>
+            {/* <Image width={200} height={200} src={imgSrc ? imgSrc :"/no-image.jpg"} alt='Story Image'/> */}
+            <Image width={200} height={200} src={imgSrc} alt='Story Image' />
         </div>
         </Link>
         </div>
@@ -98,3 +99,6 @@ const StoryItem = ({key,story}: Props) => {
 }
 
 export default StoryItem
+
+
+
