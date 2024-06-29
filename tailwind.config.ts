@@ -16,15 +16,28 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            maxWidth: '100%', // add required value here
-          }
-      }
-      }
+            maxWidth: '100%',
+            color: 'rgba(0, 0, 0, 0.87)',
+            lineHeight: '1.6',
+          },
+        },
+      },
+      colors: {
+        primary: '#ff6347',
+        'accent-1': '#f0f0f0',
+      },
+      screens: {
+        'dark-mode': { raw: '(prefers-color-scheme: dark)' },
+      },
+      fontFamily: {
+        sans: ['Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [
     require('@tailwindcss/typography'),
-    // ...
+    
   ],
 };
+
 export default config;
