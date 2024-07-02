@@ -42,9 +42,9 @@ const NavbarStory = ({storyId, CurrentUserFirstName, CurrentUserLastName,Current
   >
         <div className='flex items-center justify-between'>
             <div className='flex items-center space-x-3'>
-            <Link href='/'>
+            {/* <Link href='/'>
                 <Image src='/medium-icon.svg' width={40} height={40} alt='Medium Logo'/> 
-            </Link>
+            </Link> */}
             <Link href="/">
           <h2 className="text-[#000] w-[199.275px] h-[50.5px] font-bold text-2xl leading-[1.2] m-0 inline-flex items-center justify-center">
             Ensar University
