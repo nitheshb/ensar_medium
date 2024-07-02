@@ -9,6 +9,7 @@ import Discover from "./Discover";
 import DemoHeader from "./DemoHeader";
 import StoryList from "@/components/StoryList";
 import StoryItem from "@/components/StoryItem";
+import Navbar from "@/components/Navbar";
 
 const Demo: React.FC = () => {
   return (

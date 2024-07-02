@@ -5,6 +5,7 @@ import RenderStory from "../RenderStory"
 import AuthorSpecific from "../AuthorSpecific"
 import { User } from "@clerk/nextjs/server"
 import { CheckSaved } from "@/actions/Save"
+import DemoHeader from "@/app/home/DemoHeader"
 
 const page = async ({ params }: { params: { storyId: string } }) => {
     const PublishedStory = await getPublishedStoryById(params.storyId)
@@ -22,7 +23,9 @@ const page = async ({ params }: { params: { storyId: string } }) => {
 
     return (
         <div>
-            <Navbar/>
+            {/* <Navbar/> */}
+            <DemoHeader/>
+
             <RenderStory AuthorFirstName={Author.firstName} AuthorImage={Author.imageUrl} AuthorLastName={Author.lastName} PublishedStory={PublishedStory.response} />
             <AuthorSpecific AuthorFirstName={Author.firstName} AuthorImage={Author.imageUrl} AuthorLastName={Author.lastName} PublishedStory={PublishedStory.response} AuthorEmail={Author.emailAddresses[0].emailAddress} />
         </div>

@@ -4,6 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { discover, discoverActions } from "../../data/data";
 
+
 const Discover: React.FC = () => {
   const router = useRouter();
 
@@ -15,6 +16,7 @@ const Discover: React.FC = () => {
           {discover.map((item, i) => (
             <button
               onClick={() => router.push(`/filter/${item.toLowerCase()}`)}
+        
               key={i}
               className="bg-gray-200 py-2 px-3 text-sm rounded-full"
             >

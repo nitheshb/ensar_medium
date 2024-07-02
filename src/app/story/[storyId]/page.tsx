@@ -11,7 +11,7 @@ const page = async ({ params }: { params: { storyId: string } }) => {
     const Story = await getStoryById(params.storyId)
     const User = await getCurrentuser()
   return (
-    <div className='max-w-[1000px] mx-auto ' role='textbox' data-length>
+    <div className=' mx-auto ' role='textbox' data-length>
         <NavbarStory storyId={params.storyId} CurrentUserId={User.id} CurrentUserFirstName={User?.firstName || ''} CurrentUserLastName={User?.lastName || ''} />
         <NewStory storyId={params.storyId} Storycontent={Story.response?.content}/>
     </div>

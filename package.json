@@ -11,14 +11,19 @@
   "dependencies": {
     "@clerk/nextjs": "^4.31.3",
     "@prisma/client": "^5.9.1",
+    "@supabase/supabase-js": "^2.44.2",
+    "@uploadthing/react": "^6.7.2",
     "axios": "^1.6.7",
+    "cloudinary": "^2.2.0",
     "highlight.js": "^11.9.0",
     "lucide-react": "^0.323.0",
     "medium-editor": "^5.23.3",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-select": "^5.8.0"
+    "react-select": "^5.8.0",
+    "uploadthing": "^6.13.2",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",

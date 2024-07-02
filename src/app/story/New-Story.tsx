@@ -228,8 +228,11 @@ const ImageComp = ({imageUrl, file, handleSave}:{imageUrl:string, file:File, han
         try {
             const formData = new FormData()
             formData.append('file', file)
-            await ImageUpload(formData).then((SecureImageUrl) => 
-                setCurrentImageUrl(SecureImageUrl)
+            await ImageUpload(formData).then((SecureImageUrl) => {
+              const x =   `https://cezgydfbprzqgxkfcepq.supabase.co/storage/v1/object/public/${SecureImageUrl}`
+              console.log('check it for now', x)
+                setCurrentImageUrl(x)
+            }
             )
         } catch (error) {
             console.log('Error uplaoding the image', error)

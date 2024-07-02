@@ -53,6 +53,7 @@ const RenderStory = async ({AuthorFirstName,AuthorImage,AuthorLastName,Published
     : content;
 
     const finalSanitizedContent = sanitizedContent.replace(/<h1[^>]*>[\s\S]*?<\/h1>|<select[^>]*>[\s\S]*?<\/select>|<textarea[^>]*>[\s\S]*?<\/textarea>/gi, '');
+    console.log('chek it', finalSanitizedContent)
   return (
     <div className='flex items-center justify-center mt-6 max-w-[800px] mx-auto'>
         <div>

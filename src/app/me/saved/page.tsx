@@ -2,6 +2,7 @@ import { getDraftStory, getPublishedStory, getSavedStory } from '@/actions/me'
 import React from 'react'
 import StoryPage from '../StoryPage'
 import Navbar from '@/components/Navbar'
+import DemoHeader from '@/app/home/DemoHeader'
 
 type Props = {}
 
@@ -11,7 +12,9 @@ const page = async (props: Props) => {
     const saved = await getSavedStory()
   return (
     <div>
-      <Navbar/>
+       <DemoHeader/>
+
+      {/* <Navbar/> */}
         <StoryPage stories={saved.response} TotalDrafts={drafts.response.length} TotalPublished={published.response.length} TotalSaved={saved.response.length}/>
     </div>
   )

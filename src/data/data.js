@@ -33,16 +33,10 @@ export const nav = [
   
   
   export const discoverActions = [
-    "Help",
-    "Status",
-    "Writers",
-    "Blog",
     "Careers",
     "Privacy",
     "Terms",
     "About",
-    "Text to speech",
-    "Teams",
   ];
   
   export const recommendedPosts = [

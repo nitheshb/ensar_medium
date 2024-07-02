@@ -20,6 +20,8 @@ type Props = {
 const NavbarStory = ({storyId, CurrentUserFirstName, CurrentUserLastName,CurrentUserId}: Props) => {
     const router = useRouter()
     const [showPopup, setShowPopup] = useState<boolean>(false)
+    const [isActive, setIsActive] = useState(false);
+
 
     const PublishStory = async (topics:string[]) => {
         try {
@@ -33,12 +35,21 @@ const NavbarStory = ({storyId, CurrentUserFirstName, CurrentUserLastName,Current
         }
     }
   return (
-    <div className='px-8 py-2 border-b-[1px]'>
+    <header
+    className={`border-b border-black sticky top-0 z-50 px-4
+    ${isActive ? "bg-white" : "bg-[#FFC017]"}
+    transition-all duration-500`}
+  >
         <div className='flex items-center justify-between'>
             <div className='flex items-center space-x-3'>
             <Link href='/'>
-                <Image src='/medium-icon.svg' width={40} height={40} alt='Medium Logo'/>
+                <Image src='/medium-icon.svg' width={40} height={40} alt='Medium Logo'/> 
             </Link>
+            <Link href="/">
+          <h2 className="text-[#000] w-[199.275px] h-[50.5px] font-bold text-2xl leading-[1.2] m-0 inline-flex items-center justify-center">
+            Ensar University
+          </h2>
+        </Link>
             </div>
             <div className='flex items-center space-x-7'>
             <button onClick={() => setShowPopup(!showPopup)} className='flex items-center opacity-90 hover:opacity-100 duration-100 ease-in cursor-pointer bg-green-600 hover:bg-green-700 rounded-full px-3 py-1 text-[13px] text-white'>Publish</button>
@@ -48,7 +59,7 @@ const NavbarStory = ({storyId, CurrentUserFirstName, CurrentUserLastName,Current
         {showPopup && (
             <SaveStoryPopUp storyId={storyId} PublishStory={PublishStory} setShowPopUp={setShowPopup} CurrentUserFirstName={CurrentUserFirstName} CurrentUserLastName={CurrentUserLastName} CurrentUserId={CurrentUserId}/>
         )}
-    </div>
+    </header>
   )
 }
 
